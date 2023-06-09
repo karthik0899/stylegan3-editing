@@ -23,6 +23,8 @@ class FaceEditor:
             'smile': torch.from_numpy(np.load(paths['smile'])).cuda(),
             'pose': torch.from_numpy(np.load(paths['pose'])).cuda(),
             'Male': torch.from_numpy(np.load(paths['Male'])).cuda(),
+            'Eyeglasses': torch.from_numpy(np.load(paths['Eyeglasses'])).cuda(),
+
         }
 
     def edit(self, latents: torch.tensor, direction: str, factor: int = 1, factor_range: Optional[Tuple[int, int]] = None,
